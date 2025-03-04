@@ -22,6 +22,11 @@ jobs:
           npm install
           npm run build
 
+      - name: Debug build output
+        run: |
+          echo "Listing build output"
+          ls -R dist  # Ensure the 'dist' folder contains your build output
+
       - name: Configure Git
         run: |
           git config --global user.name "github-actions[bot]"
@@ -32,7 +37,7 @@ jobs:
           git remote set-url origin https://x-access-token:${{ secrets.GH_PAT }}@github.com/MakeinaAI/website.git
           git checkout -B gh-pages  # Create or switch to gh-pages branch
           rm -rf *  # Remove any existing files in gh-pages branch
-          cp -r ./public/* ./  # Copy new build files to root
+          cp -r ./dist/* ./  # Copy the build files from 'dist' directory
           git add -A
           git commit -m "Deploy updated website"
           git push origin gh-pages --force  # Force push to gh-pages
