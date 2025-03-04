@@ -31,7 +31,7 @@ jobs:
         run: |
           git remote set-url origin https://x-access-token:${{ secrets.GH_PAT }}@github.com/MakeinaAI/website.git
           git checkout main  # Make sure you are on the main branch
-          cp -r ./build/* ./  # Copy the build files to the root directory
+          cp -r ./public/* ./  # Copy the build files to the root directory
           git add -A
           git commit -m "Deploy updated website"
           git push origin main  # Push to the main branch
