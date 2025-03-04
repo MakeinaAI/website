@@ -29,8 +29,12 @@ jobs:
       # Configure Git user for the CI environment
       - name: Set up Git user
         run: |
-          git config --global user.email "y.honey0128@gmail.com"  # Replace with your email
-          git config --global user.name "y-honey"  # This can be any name
+          git config --global user.email "y.honey0128@gmail.com"
+          git config --global user.name "y-honey"
+
+      # Authenticate with GitHub using the token
+      - name: Set up GitHub authentication
+        run: git config --global url."https://$GITHUB_TOKEN@github.com/".insteadOf "https://github.com/"
 
       # Build the Astro project
       - name: Build project
@@ -39,3 +43,5 @@ jobs:
       # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         run: npm run deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}  # Use the GitHub secret here
