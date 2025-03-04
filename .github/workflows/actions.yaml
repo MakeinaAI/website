@@ -27,11 +27,7 @@ jobs:
       - name: Clear npm cache
         run: npm cache clean --force  # Clear npm cache before installing dependencies
       - run: npm ci
-      - name: Debug: List files before build
-        run: ls -alh  # List files before the build
       - run: npm run build
-      - name: Debug: List files after build
-        run: ls -alh  # List files after the build to check for dist folder
 
   deploy:
     runs-on: ubuntu-latest
