@@ -34,7 +34,7 @@ jobs:
 
       # Authenticate with GitHub using the token
       - name: Set up GitHub authentication
-        run: git config --global url."https://$GITHUB_TOKEN@github.com/".insteadOf "https://github.com/"
+        run: git config --global url."https://$GH_TOKEN@github.com/".insteadOf "https://github.com/"
 
       # Build the Astro project
       - name: Build project
@@ -44,4 +44,4 @@ jobs:
       - name: Deploy to GitHub Pages
         run: npm run deploy
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}  # Use the GitHub secret here
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}  # Use the GitHub secret here
