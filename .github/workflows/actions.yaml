@@ -3,10 +3,9 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Change to the correct branch if needed
-
+      - main 
 permissions:
-  contents: write  # Allows GitHub Actions to push changes
+  contents: write
 
 jobs:
   deploy:
