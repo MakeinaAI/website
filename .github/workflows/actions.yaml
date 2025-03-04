@@ -26,6 +26,8 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
+      - name: List files in the directory
+        run: ls -alh
 
   deploy:
     runs-on: ubuntu-latest
@@ -37,8 +39,8 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages  # GitHub Pages branch
-          folder: dist      # This should be `dist` for Astro
-          token: ${{ secrets.GITHUB_TOKEN }}  # Required for deployment
+          folder: dist      # Ensure this folder path is correct
+          token: ${{ secrets.GITHUB_TOKEN }}
 
   check:
     runs-on: ubuntu-latest
