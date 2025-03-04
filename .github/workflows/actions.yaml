@@ -38,7 +38,7 @@ jobs:
       - name: Check file list
         run: ls -la
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
+        # uses: JamesIves/github-pages-deploy-action@v4
         run: npm run deploy
         # with:
         #   branch: gh-pages
