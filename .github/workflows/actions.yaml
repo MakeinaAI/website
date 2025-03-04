@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main 
+      - main
 permissions:
   contents: write
 
@@ -30,8 +30,9 @@ jobs:
       - name: Deploy to GitHub Pages
         run: |
           git remote set-url origin https://x-access-token:${{ secrets.GH_PAT }}@github.com/MakeinaAI/website.git
-          git checkout main
-          cp -r ./public/* ./
+          git checkout -B gh-pages  # Create or switch to gh-pages branch
+          rm -rf *  # Remove any existing files in gh-pages branch
+          cp -r ./public/* ./  # Copy new build files to root
           git add -A
           git commit -m "Deploy updated website"
-          git push origin main
+          git push origin gh-pages --force  # Force push to gh-pages
