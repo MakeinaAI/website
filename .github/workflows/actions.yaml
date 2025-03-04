@@ -37,7 +37,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: main  # Deploy directly from the main branch
-          folder: build  # Adjust based on your project build output
-          clean: true  # Remove old files before deploying
+          branch: main 
+          folder: build
+          clean: true
 
