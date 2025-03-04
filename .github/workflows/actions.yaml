@@ -26,6 +26,12 @@ jobs:
           npm install
           npm install --save-dev gh-pages
 
+      # Configure Git user for the CI environment
+      - name: Set up Git user
+        run: |
+          git config --global user.email "y.honey0128@gmail.com"  # Replace with your email
+          git config --global user.name "GitHub Actions"  # This can be any name
+
       # Build the Astro project
       - name: Build project
         run: npm run build
@@ -33,5 +39,3 @@ jobs:
       # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         run: npm run deploy
-
-      # Optionally, verify if the deploy was successful (option
