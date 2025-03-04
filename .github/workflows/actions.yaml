@@ -30,6 +30,7 @@ jobs:
 
       - name: Prepare for Deployment
         run: |
+          mkdir -p build
           touch build/.nojekyll  # Prevent GitHub Pages from ignoring certain files
           echo "makeinaai.github.io" > build/CNAME  # Add custom domain if needed
 
