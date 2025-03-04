@@ -14,11 +14,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      # Set up Node.js environment
+      # Set up Node.js environment with a supported version
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '16'  # Set your desired Node.js version
+          node-version: '18.17.1'  # Update to a supported version
 
       # Install dependencies including gh-pages
       - name: Install dependencies
@@ -33,3 +33,5 @@ jobs:
       # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         run: npm run deploy
+
+      # Optionally, verify if the deploy was successful (option
