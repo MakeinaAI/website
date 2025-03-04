@@ -30,7 +30,7 @@ jobs:
       - name: Set up Git user
         run: |
           git config --global user.email "y.honey0128@gmail.com"  # Replace with your email
-          git config --global user.name "GitHub Actions"  # This can be any name
+          git config --global user.name "y-honey"  # This can be any name
 
       # Build the Astro project
       - name: Build project
