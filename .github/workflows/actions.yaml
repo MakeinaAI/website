@@ -1,44 +1,31 @@
-name: Deploy to GitHub Pages
+name: Deploy Website to GitHub Pages
 
 on:
   push:
     branches:
       - main
-permissions:
-  contents: write
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
         with:
-          persist-credentials: false
+          node-version: '14'
 
-      - name: Install Dependencies
-        run: |
-          npm install
-          npx astro build  # Build using npx if installed locally
+      - name: Install dependencies
+        run: npm install
 
-      - name: Debug build output
-        run: |
-          echo "Listing all files after build to verify 'dist' directory"
-          ls -R .  # List all files in the repository
-
-      - name: Configure Git
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+      - name: Build website
+        run: npm run build
 
       - name: Deploy to GitHub Pages
-        run: |
-          git remote set-url origin https://x-access-token:${{ secrets.GH_PAT }}@github.com/MakeinaAI/website.git
-          git checkout -B gh-pages  # Create or switch to gh-pages branch
-          rm -rf *  # Remove any existing files in gh-pages branch
-          ls -R .  # List files again before copying (verify dist is there)
-          cp -r ./dist/* ./  # Copy the build files from the 'dist' directory
-          git add -A
-          git commit -m "Deploy updated website"
-          git push origin gh-pages --force
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
