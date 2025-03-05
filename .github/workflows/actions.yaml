@@ -21,7 +21,9 @@ jobs:
           node-version: '18'
 
       - name: Install dependencies
-        run: npm install
+        run: |
+          npm install
+          npm install --save-dev gh-pages  # Ensure gh-pages is installed
 
       - name: Build project
         run: npm run build
@@ -30,6 +32,6 @@ jobs:
         run: ls -la dist
 
       - name: Deploy to GitHub Pages
-        run: npm run deploy
+        run: npx gh-pages -d dist
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
