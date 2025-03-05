@@ -33,14 +33,6 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Fix base URL in output files
-        run: |
-          find dist -type f -name "*.css" -exec sed -i 's|url(/_astro/|url(/website/_astro/|g' {} +
-          find dist -type f -name "*.js" -exec sed -i 's|url(/_astro/|url(/website/_astro/|g' {} +
-          find dist -type f -name "*.webp" -exec sed -i 's|url(/_astro/|url(/website/_astro/|g' {} +
-          find dist -type f -name "*.svg" -exec sed -i 's|url(/_astro/|url(/website/_astro/|g' {} +
-          find dist -type f -name "*.ico" -exec sed -i 's|url(/_astro/|url(/website/_astro/|g' {} +
-
       - name: Verify build output
         run: ls -laR dist
 
