@@ -37,6 +37,6 @@ jobs:
         run: ls -la dist
 
       - name: Deploy to GitHub Pages
-        run: npx gh-pages -d dist --repo "https://x-access-token:${GH_TOKEN}@github.com/y-honey/your-repo.git"
+        run: npx gh-pages -d dist --repo "https://x-access-token:${ORG_GH_PAT}@github.com/MakeinaAI/website.git"
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ORG_GH_PAT: ${{ secrets.ORG_GH_PAT }}
