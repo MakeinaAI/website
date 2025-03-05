@@ -22,8 +22,13 @@ const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroInteg
   hasExternalScripts ? (Array.isArray(items) ? items.map((item) => item()) : [items()]) : [];
 
 export default defineConfig({
-  output: 'static',
-  base: "/website/",
+  output: "static",
+  outDir: "./docs",
+  site: "https://makeinaai.github.io/website/",
+
+  build: {
+    assets: "astro",
+  },
 
   integrations: [
     tailwind({
