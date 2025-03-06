@@ -25,7 +25,8 @@ export default defineConfig({
   output: "static",
   outDir: "./docs",
   site: "https://makeinaai.github.io/website/",
-
+  base: "/website/",
+  
   build: {
     assets: "astro",
   },
