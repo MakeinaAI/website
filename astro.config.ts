@@ -23,7 +23,6 @@ const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroInteg
 
 export default defineConfig({
   output: "static",
-  outDir: "./docs",
   site: "https://makeinaai.github.io/website/",
   base: "/website/",
   
