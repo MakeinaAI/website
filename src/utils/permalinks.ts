@@ -54,36 +54,36 @@ export const getPermalink = (slug = '', type = 'page'): string => {
 
   switch (type) {
     case 'home':
-      permalink = '/website/' + getHomePermalink();
+      permalink = getHomePermalink();
       break;
 
     case 'blog':
-      permalink = '/website/' + getBlogPermalink();
+      permalink = getBlogPermalink();
       break;
 
     case 'asset':
-      permalink = '/website/' + getAsset(slug);
+      permalink = getAsset(slug);
       break;
 
     case 'category':
-      permalink = '/website/' + createPath(CATEGORY_BASE, trimSlash(slug));
+      permalink = createPath(CATEGORY_BASE, trimSlash(slug));
       break;
 
     case 'tag':
-      permalink = '/website/' + createPath(TAG_BASE, trimSlash(slug));
+      permalink = createPath(TAG_BASE, trimSlash(slug));
       break;
 
     case 'post':
-      permalink = '/website/' + createPath(trimSlash(slug));
+      permalink = createPath(trimSlash(slug));
       break;
 
     case 'page':
     default:
-      permalink = '/website/' + createPath(slug);
+      permalink = createPath(slug);
       break;
   }
 
-  return '/website/' +  definitivePermalink(permalink);
+  return definitivePermalink(permalink);
 };
 
 /** */
