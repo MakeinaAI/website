@@ -9,13 +9,13 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: Makeina AI
-  description: "\U0001F3ED Suitable for your new business!"
-  robots:Star
+    default: MakeinaAI
+  description: "\U0001F3ED Suitable for your new business"
+  robots:
     index: true
     follow: true
   openGraph:
-    site_name: Makeina AI
+    site_name: MakeinaAI
     images:
       - url: '~/assets/images/default.png'
         width: 1200
