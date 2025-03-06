@@ -25,23 +25,21 @@ const metadata = {
     loop 
     muted 
     playsinline 
-    class="absolute inset-0 w-full h-[85%] object-cover"
+    class="absolute top-[85px] w-full h-[85%] object-cover"
   >
     <source src="/website/videos/makeina-headline-background.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
-
-  <Hero>
+  <Content>
     <Fragment slot="subtitle">
-      <span class="hidden sm:inline" style="font-size: 40px;">
-        Welcome to Makeina AI! As an award-winning startup, we are at the forefront of cutting-edge advancements, 
-        harnessing the power of AI-powered automation, low-code platforms, and vision language models to redefine 
-        the future of business.
-      </span>
-    </Fragment>
-  </Hero>
+        <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2 mt-[80px] !text-white">
+          Welcome to Makeina AI! As an award-winning startup, we are at the forefront of cutting-edge advancements, 
+          harnessing the power of AI-powered automation, low-code platforms, and vision language models to redefine 
+        </h2>
 
-  
+    </Fragment>
+  </Content>
+    
   <div style="width: 80%; margin: auto; padding-top: 150px">
     <!-- Content Widget **************** -->
     <Content
@@ -188,8 +186,8 @@ const metadata = {
     </Fragment>
   </CallToAction>
 
-  <!-- <video controls width="60%" playsinline>
-    <source src="/videos/makeina-headline-background.mp4" type="video/mp4" />
+  <video controls width="60%" style="margin:auto; margin-bottom: 100px;" playsinline>
+    <source src="/website/videos/WorkAtMakeina.mp4" type="video/mp4" />
     Your browser does not support the video tag.
-  </video> -->
+  </video>
 </Layout>
