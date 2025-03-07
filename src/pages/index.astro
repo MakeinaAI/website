@@ -20,28 +20,23 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
-  <video 
-    autoplay 
-    loop 
-    muted 
-    playsinline 
-    class="absolute top-[85px] w-full h-[85%] object-cover"
-  >
-    <source src="/website/videos/makeina-headline-background.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
-  <Content>
-    <Fragment slot="subtitle">
-        <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2 mt-[80px] !text-white">
-          Welcome to Makeina AI! As an award-winning startup, we are at the forefront of cutting-edge advancements, 
-          harnessing the power of AI-powered automation, low-code platforms, and vision language models to redefine
-          the future of business.
-        </h2>
 
+  <Hero
+   
+    image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
+  >
+
+    <Fragment slot="subtitle">
+        <span class="hidden sm:inline" style="font-size: 40px;">
+          Welcome to Makeina AI! As an award-winning startup, we are at the forefront of cutting-edge advancements, 
+          harnessing the power of AI-powered automation, low-code platforms, and vision language models to redefine 
+          the future of business.
+        </span>
     </Fragment>
-  </Content>
-    
-  <div style="width: 80%; margin: auto; padding-top: 150px">
+  </Hero>
+
+  
+  <div style="width: 80%; margin: auto;">
     <!-- Content Widget **************** -->
     <Content
       isReversed
@@ -127,8 +122,18 @@ const metadata = {
     ]}
   />
 
+  <!-- Careers Section **************** -->
+  <div style="width: 80%; margin: auto; padding-top: 150px">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Careers</h3>
+    <p>
+      At Makeina AI, you’ll get access to the OpenAI GPT-4 and GPT-4o (text, images, audio, video) API and models, opening up opportunities to grow your professional expertise. 
+      You’ll also have access to online courses about prompt engineering, providing continuous learning and professional development.
+    </p>
+  </div>
+
   <!-- Developers Content Widget **************** -->
   <div style="width: 60%; margin: auto;">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Current Internship Openings</h3>
     <Content
       isReversed
       image={{
@@ -187,8 +192,5 @@ const metadata = {
     </Fragment>
   </CallToAction>
 
-  <video controls width="60%" style="margin:auto; margin-bottom: 100px;" playsinline>
-    <source src="/website/videos/WorkAtMakeina.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
+  
 </Layout>
