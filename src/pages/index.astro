@@ -20,27 +20,20 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
-  <video 
-    autoplay 
-    loop 
-    muted 
-    playsinline 
-    class="absolute top-[85px] w-full h-[85%] object-cover"
-  >
+  <video autoplay loop muted playsinline class="absolute top-[85px] w-full h-[85%] object-cover">
     <source src="/website/videos/makeina-headline-background.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
   <Content>
     <Fragment slot="subtitle">
-        <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2 mt-[80px] !text-white">
-          Welcome to Makeina AI! As an award-winning startup, we are at the forefront of cutting-edge advancements, 
-          harnessing the power of AI-powered automation, low-code platforms, and vision language models to redefine
-          the future of business.
-        </h2>
-
+      <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2 mt-[80px] !text-white">
+        Welcome to Makeina AI! As an award-winning startup, we are at the forefront of cutting-edge advancements,
+        harnessing the power of AI-powered automation, low-code platforms, and vision language models to redefine the
+        future of business.
+      </h2>
     </Fragment>
   </Content>
-    
+
   <div style="width: 80%; margin: auto; padding-top: 150px">
     <!-- Content Widget **************** -->
     <Content
@@ -48,14 +41,14 @@ const metadata = {
       image={{
         src: '~/assets/images/our-mission.png',
         alt: 'Colorful Image',
-        className: 'w-full h-auto !object-contain'
+        className: 'w-full h-auto !object-contain',
       }}
     >
       <Fragment slot="content">
         <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Our Mission</h3>
-        At Makeina AI, we believe in the limitless potential of technology to streamline processes, 
-        empower organizations, and create unprecedented efficiency. Our AI-powered solutions are 
-        reshaping the landscape of administration, enabling businesses to operate with unmatched precision and agility.
+        At Makeina AI, we believe in the limitless potential of technology to streamline processes, empower organizations,
+        and create unprecedented efficiency. Our AI-powered solutions are reshaping the landscape of administration, enabling
+        businesses to operate with unmatched precision and agility.
       </Fragment>
 
       <Fragment slot="bg">
@@ -70,23 +63,23 @@ const metadata = {
       image={{
         src: '~/assets/images/beyond-innovation.png',
         alt: 'Blueprint Image',
-        className: 'w-full h-auto !object-contain'
+        className: 'w-full h-auto !object-contain',
       }}
     >
       <Fragment slot="content">
-          <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Beyond Innovation</h3>
-          Innovation is in our DNA, but it’s our passion for problem-solving that sets us apart. 
-          We thrive on challenges, turning obstacles into opportunities and pushing the boundaries 
-          of what’s possible. With our forward-thinking approach, we empower businesses to embrace 
-          the future with confidence, knowing that they have a partner they can trust every step of the way.
-        </Fragment>
+        <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Beyond Innovation</h3>
+        Innovation is in our DNA, but it’s our passion for problem-solving that sets us apart. We thrive on challenges, turning
+        obstacles into opportunities and pushing the boundaries of what’s possible. With our forward-thinking approach, we
+        empower businesses to embrace the future with confidence, knowing that they have a partner they can trust every step
+        of the way.
+      </Fragment>
 
       <Fragment slot="bg">
         <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
       </Fragment>
     </Content>
   </div>
-  
+
   <!-- Feature Widget **************** -->
 
   <!-- tagline="Features"
@@ -98,7 +91,6 @@ const metadata = {
 
   <Features
     id="features"
-    
     items={[
       {
         title: 'AI-POWERED AUTOMATION',
@@ -132,15 +124,18 @@ const metadata = {
     <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Careers</h3>
     <div style="max-width: 600px; margin: auto;">
       <p>
-        At Makeina AI, you’ll get access to the OpenAI GPT-4 and GPT-4o (text, images, audio, video) API and models, opening up opportunities to grow your professional expertise. 
-        You’ll also have access to online courses about prompt engineering, providing continuous learning and professional development.
+        At Makeina AI, you’ll get access to the OpenAI GPT-4 and GPT-4o (text, images, audio, video) API and models,
+        opening up opportunities to grow your professional expertise. You’ll also have access to online courses about
+        prompt engineering, providing continuous learning and professional development.
       </p>
-  </div>
+    </div>
   </div>
 
   <!-- Developers Content Widget **************** -->
   <div style="width: 60%; margin: auto; margin-top: 100px;">
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2" style="text-align: center;">Current Internship Openings</h3>
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2" style="text-align: center;">
+      Current Internship Openings
+    </h3>
     <Content
       isReversed
       image={{
@@ -150,7 +145,7 @@ const metadata = {
     >
       <Fragment slot="content">
         <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Realtime API Developer</h3>
-        Responsibilities include developing long-lived WebSocket connections and building realtime voicebots. 
+        Responsibilities include developing long-lived WebSocket connections and building realtime voicebots.
       </Fragment>
     </Content>
 
@@ -162,9 +157,9 @@ const metadata = {
       }}
     >
       <Fragment slot="content">
-          <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Full Stack Developer</h3>
-          Engage in front-end and back-end development to build comprehensive AI solutions which will be sold as SaaS.
-        </Fragment>
+        <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Full Stack Developer</h3>
+        Engage in front-end and back-end development to build comprehensive AI solutions which will be sold as SaaS.
+      </Fragment>
     </Content>
 
     <Content
@@ -184,20 +179,15 @@ const metadata = {
 
   <!-- Stats Widget ****************** -->
 
-  <!-- CallToAction Widget *********** -->
-
-  <CallToAction>
-    <Fragment slot="title">
-      Great Company with great people
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      Pros: Great flexibility in work and nice work benefits. 
-      I loved the startup proactive mindset and it was so great and 
-      inspiring to work with such innovative team and new technology 
-      which immensely transforms 2+ different industries
-    </Fragment>
-  </CallToAction>
+  <div class="gdWidget" style="margin:0 auto;">
+    <a
+      href="https://www.glassdoor.co.uk/api/api.htm?version=1&action=employer-single-review&t.s=w-m&t.a=c&format=500x250&reviewId=86777491"
+      target="_gd">Makeina Reviews</a
+    > | <a
+      href="https://www.glassdoor.co.uk/api/api.htm?version=1&action=employer-jobs&t.s=w-m&t.a=c&reviewId=86777491"
+      target="_gd">Makeina Jobs</a
+    > | <a href="https://www.glassdoor.co.uk/Reviews/index.htm?t.s=w-m&t.a=c" target="_gd">Company review</a> from employees
+  </div><script src="https://www.glassdoor.co.uk/static/js/api/widget/v1.js"></script>
 
   <video controls width="60%" style="margin:auto; margin-bottom: 100px;" playsinline>
     <source src="/website/videos/WorkAtMakeina.mp4" type="video/mp4" />
